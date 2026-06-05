@@ -15,7 +15,7 @@ st.title("Drug Response Prediciton")
 
 # get user Input
 Drug=st.number_input("Drug Dosage in mg",min_value=0.0)
-Systolic Blood Pressure (mmHg)=st.number_input("Systolic Blood Pressure",min_value=0.0)
+SystolicBloodPressure(mmHg)=st.number_input("Systolic Blood Pressure",min_value=0.0)
 Heart Rate (BPM)=st.number_input("Heart Rate (BPM)",min_value=0.0,max_value=5)
 Liver Toxicity Index (U/L)=st.number_input("Liver Toxicity Index (U/L)",min_value=0.0)
 Blood Glucose Level (mg/dL)=st.number_input("Blood Glucose Level",min_value=0.0)
