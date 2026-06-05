@@ -5,7 +5,7 @@ import joblib
 best_SVC_model = joblib.load('best_SVC_model.pkl')
 columns=['Drug Dosage (mg)', 'Systolic Blood Pressure (mmHg)',
        'Heart Rate (BPM)', 'Liver Toxicity Index (U/L)',
-       'Blood Glucose Level (mg/dL)', 'Drug Response']
+       'Blood Glucose Level (mg/dL)']
 def predict_drug_response(features):
   prediction=best_SVC_model.predict(features)
   return prediction
@@ -23,7 +23,7 @@ BGL=st.number_input("Blood Glucose Level",value=0.0)
 
 
 Input_data=pd.DataFrame([[DD, SBP,HR,LTI,BGL]],columns=columns)
-if st.button("Drug Response"):
+if st.button("Predict Drug Response"):
   prediction=predict_drug_response(Input_data)
   if prediction[0]==0:
     st.write("0 No Response")
