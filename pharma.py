@@ -14,11 +14,11 @@ def predict_drug_response(features):
 st.title("Drug Response Prediction")
 
 # get user Input
-DD=st.number_input("Drug Dosage in mg",value=0.0)
-SBP=st.number_input("Systolic Blood Pressure",value=0.0)
-HR=st.number_input("Heart Rate (BPM)",min_value=0.0,value=5)
-LTI=st.number_input("Liver Toxicity Index (U/L)",value=0.0)
-BGL=st.number_input("Blood Glucose Level",value=0.0)
+DD = st.number_input("Drug Dosage in mg", min_value=None, max_value=None, value=0.0)
+SBP = st.number_input("Systolic Blood Pressure (mmHg)", min_value=None, max_value=None, value=0.0)
+HR = st.number_input("Heart Rate (BPM)", min_value=None, max_value=None, value=0.0) # Removed max_value=5
+LTI = st.number_input("Liver Toxicity Index (U/L)", min_value=None, max_value=None, value=0.0)
+BGL = st.number_input("Blood Glucose Level (mg/dL)", min_value=None, max_value=None, value=0.0)
 
 
 
