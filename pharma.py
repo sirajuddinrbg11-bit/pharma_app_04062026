@@ -22,9 +22,7 @@ BGL=st.number_input("Blood Glucose Level",min_value=0.0)
 
 
 
-Input_data=pd.DataFrame([[Drug Dosage (mg), Systolic Blood Pressure (mmHg),
-                          Heart Rate (BPM), Liver Toxicity Index (U/L),
-                          Blood Glucose Level (mg/dL), Drug Response]],columns=columns)
+Input_data=pd.DataFrame([[DD, SBP,HR,LTI,BGL]],columns=columns)
 if st.button("Drug Response"):
   prediction=predict_drug_response(Input_data)
   if prediction[0]==0:
